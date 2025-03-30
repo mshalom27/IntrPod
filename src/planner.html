@@ -24,15 +24,24 @@
 
         <div class="space-y-4 w-full">
             <input type="text" class="destination  px-4 py-2 rounded border-none text-white" 
-                   placeholder=" Where To ?" required>
+                   placeholder=" Where To ?" id="input" required>
             <input type="date" class="StartDate  px-4 py-2 rounded border-none" required>
             <input type="date" class="EndDate  px-4 py-2 rounded border-none" required>
         </div>
 
-        <button class="button text-lg bg-blue-950 w-1/2 text-white py-3 rounded-full hover:bg-blue-900 transition-all duration-300 shadow-lg">
-            Generate Itinerary
+        <button class="button text-lg bg-blue-950 w-1/2 text-white py-3 rounded-full hover:bg-blue-900 transition-all duration-300 shadow-lg" id="Search">
+            Generate Itinerary 
         </button>
-        
+        <div class="flex justify-between m-2">
+            <div class="m-3 p-3" id="picture1"></div>
+            <div class="m-3 p-3" id="picture2"></div>
+            <div class="m-3 p-3" id="picture3"></div>
+            <div class="m-3 p-3" id="picture4"></div>
+            <div class="m-3 p-3" id="picture5"></div>
+            <div class="m-3 p-3" id="picture6"></div>
+            <div class="m-3 p-3" id="picture7"></div>
+            <div class="m-3 p-3" id="picture8"></div>
+        </div>
 
         <p class="immediate_action text-blue-800 font-semibold"></p>
         
@@ -41,5 +50,6 @@
     </div>
 
     <script src="planner.js"></script>
+    <script src="imageai.js"></script>
 </body>
 </html>
