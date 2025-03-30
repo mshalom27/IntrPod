@@ -28,7 +28,7 @@ async function planTrip(){
                     Night: [Activity]<br/>
                     Continue this format for each day until ${endDate}. Use <strong> for day headings and time slots to make them stand out. 
                     Keep it concise and well-structured for display in a webpage paragraph using document.querySelector(".response").innerHTML. 
-                    Do not add extra text—only return the formatted itinerary in list format`,
+                    Do not add extra text—only return the formatted itinerary in list format. Do not start by writing html`,
           }],
         }],
       };
