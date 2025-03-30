@@ -1,5 +1,4 @@
-let API_KEY = "Dubai";
-const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=GEMINI_API_KEY" + API_KEY;
+let API_KEY = "AIzaSyDSDahGazX-5HIeE7bhnr22_bLelmeOjsY";
 const MODEL_NAME = "gemini-2.0-flash";
 const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${API_KEY}`;
 let btn = document.querySelector(".button");
@@ -29,7 +28,7 @@ async function planTrip(){
                     Night: [Activity]<br/>
                     Continue this format for each day until ${endDate}. Use <strong> for day headings and time slots to make them stand out. 
                     Keep it concise and well-structured for display in a webpage paragraph using document.querySelector(".response").innerHTML. 
-                    Do not add extra text—only return the formatted itinerary in list format`,
+                    Do not add extra text—only return the formatted itinerary in list format. Do not start by writing html`,
           }],
         }],
       };
@@ -47,9 +46,10 @@ async function planTrip(){
 
         if (result.candidates && result.candidates.length >0){
             console.log(result.candidates[0].content.parts[0].text);
-            const responseParagraph = document.querySelector('.response'); 
+            let responseParagraph = document.querySelector('.response'); 
             if (responseParagraph) {
             responseParagraph.innerHTML = result.candidates[0].content.parts[0].text; 
+            console.log(result.candidates[0].content.parts[0].text);
             } else {
             console.error("Paragraph element with class 'response' not found.");
             }
